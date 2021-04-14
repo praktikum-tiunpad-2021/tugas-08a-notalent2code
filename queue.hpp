@@ -9,7 +9,7 @@ namespace priority_queue {
  */
 template <typename T>
 struct Element {
-  int value;
+  T value;
   int priority;
   Element *next;
 };
