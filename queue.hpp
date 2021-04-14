@@ -102,7 +102,10 @@ T top(const Queue<T> &q) {
 template <typename T>
 void dequeue(Queue<T> &q){
   ElementPtr<T> pDel;
-  if (q.head->next == nullptr)  {
+  if (q.head == nullptr && q.tail == nullptr) {
+    pDel = nullptr;
+  }
+  else if (q.head->next == nullptr)  {
     q.head = nullptr;
     q.tail = nullptr;
   }
